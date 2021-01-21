@@ -1,0 +1,73 @@
+===============================================================================
+            Object-based Iterative Spanning Forest (OISF)
+
+        Felipe C. Belém, Silvio J. F. Guimarães and Alexandre X. Falcão
+===============================================================================
+
+This is an implementation of the Object-based Iterative Spanning Forest (OISF)
+framework. By providing an object saliency map, OISF delineates the objects 
+effectively whilst provides inumerous different segmentations (for the same
+quantity of superpixels) to better adapt it for a given application (e.g.,
+semantic segmentation and image compression). The user has the ability to control
+the quantity, the displacement and the boundary adherence (considering the color
+space or the saliency one) of the superpixels.
+
+1) Papers & Citation:
+    This work was published at... 
+        [1] - https://ieeexplore.ieee.org/document/8919941
+        [2] - https://link.springer.com/chapter/10.1007%2F978-3-030-13469-3_39
+        [3] - https://sol.sbc.org.br/index.php/sibgrapi_estendido/article/view/12979
+        [4] - http://repositorio.unicamp.br/jspui/handle/REPOSIP/345378
+    ...and if you're interested in using our code, we appreciate if you cite one of these works (especially, [2] and [4]) in your project.
+
+2) Languages Supported:
+    C/C++ (Implementation)
+
+3) Compiling & Cleaning:
+    In order to compile the necessary files for executing in C environment, one can execute the following rules...
+        make    
+        make all
+    For removing all generated files from source (excluding and including the external libraries), simply run, respectively:
+        make clean
+        make remove
+    Finally, for compiling each demo (either iftOISF_OGRID or iftOISF_OSMOX), one can execute the following rule:
+        make demo/<demo_name_sans_ext>
+
+4) Running:
+    In this folder, there are two demo files, one for each OISF variant (i.e., OISF-OGRID and OISF-OSMOX). After compiling and assuring the generation of the necessary files, one can execute each demo for more details on its parameters. Alternatively, one can execute with the parameter "--help" for the same information. As an example, for a terminal located at this folder, one can run the following command:
+        ./bin/iftOISF_OSMOX --img=input_img.png --objsm=saliency_map.png --k=200 --labels=segmentation.pgm --ovlay=overlayed_borders.ppm
+
+5) Hardware & Requirements:
+    This code was implemented and evaluated in computers with the following 
+    specifications:
+        Acer Chromebook C720P
+        Order: Little-Endian
+        OS: GalliumOS v4.16.18 x86_64
+        CPU: 4x Dual-core Intel(R) Core(TM) i3-4005U CPU @ 1.70GHz
+        Memory: 4GB RAM ; 32GB SSD
+
+        Gigabyte Technology H170M-D3H
+        Order: Little-Endian
+        OS: Ubuntu v4.15.0 x86_64
+        CPU: 8x Quad-core Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
+        Memory: 64GB RAM ; 1TB SSD
+
+    Moreover, it was compiled and executed using the following programs:
+        GNU Make: v4.1
+        GNU GCC: v5.4.0 v7.5.0
+
+    Therefore, it is >>>NOT<<< guaranteed that this code will compile/execute properly in any
+    other operational system (e.g., Windows and MacOS) or programs (e.g., MinGW and Clang).
+
+6) License:
+    This code is licensed under Open Software License ("OSL") v.3.0. Please, see LICENSE for
+    more details.
+
+7) Acknowledgments
+    This work was developed during Felipe's M.Sc. and Ph.D. studies at the University of Campinas (UNICAMP), in São Paulo, Brazil, with the cooperation of the Pontifical Catholic University of Minas Gerais (PUC-MG), in Minas Gerais, Brazil. Moreover, it was financially supported by CNPq, FAPESP, FAPEMIG and CAPES --- all brazilian research funding agencies.
+
+9) Contact:
+    Please, feel free to contact the authors for any unexpected behavior you might face (e.g., bugs):
+        Felipe C. Belém: felipe.belem@ic.unicamp.br
+        Silvio J. F. Guimarães: sjamil@pucminas.br
+        Alexandre X. Falcão: afalcao@ic.unicamp.br
