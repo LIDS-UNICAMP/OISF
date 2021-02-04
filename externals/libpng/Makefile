@@ -31,7 +31,7 @@ WARNMORE = -Wwrite-strings -Wpointer-arith -Wshadow \
 	-Wmissing-declarations -Wtraditional -Wcast-align \
 	-Wstrict-prototypes -Wmissing-prototypes # -Wconversion
 CPPFLAGS = -I$(ZLIBINC) # -DPNG_DEBUG=5
-CFLAGS = -fPIC -I$(ZLIBINC) -W -Wall -std=gnu11 -O2 # $(WARNMORE) 
+CFLAGS = -fPIC -I$(ZLIBINC) -std=gnu11 -O2 # $(WARNMORE) 
 LDFLAGS =
 LIBS = -lz -lm
 

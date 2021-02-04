@@ -13,7 +13,7 @@ BIN=./bin
 INCLUDE = -I$(INCLUDESDIR)
 #LOC = -DASMV
 #LOC = -DZLIB_DEBUG -g
-CFLAGS = $(LOC) -fPIC -W -Wall -O3 -std=gnu11
+CFLAGS = $(LOC) -fPIC -O3 -std=gnu11
 
 
 zlib: $(LIB)/libz.a
